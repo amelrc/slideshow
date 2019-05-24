@@ -6,7 +6,6 @@ let index = 0;
 let image = document.getElementById('image');
 
 setInterval(function(){
-    console.log(image.setAttribute('src', arr[index++]));
     if(index === arr.length){
             index = 0
     }
@@ -21,11 +20,6 @@ function next(){
     image.setAttribute('src', arr[index++])
     if(index > 12){index = 0}
 }
-
-// next = () => {
-//     image.setAttribute('src', arr[index++])
-//     return (index > 4) ? 0 : ''
-// }
 
 document.addEventListener('keydown', (event) => {
     const key = event.keyCode;
